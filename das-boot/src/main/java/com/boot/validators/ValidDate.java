@@ -10,7 +10,6 @@ import javax.validation.Constraint;
 import javax.validation.Payload;
 
 @Documented
-//Note: We use here already a validator which we will add in a sec too
 @Constraint(validatedBy = NewDateValidator.class)
 @Target({ElementType.TYPE, ElementType.ANNOTATION_TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
@@ -19,7 +18,6 @@ public @interface ValidDate {
  String message() default "Dates are unacceptable!";
  Class<?>[] groups() default {};
  Class<? extends Payload>[] payload() default {};
- // min value, we for now just a string
  String startDate();
  String endDate();
 }
