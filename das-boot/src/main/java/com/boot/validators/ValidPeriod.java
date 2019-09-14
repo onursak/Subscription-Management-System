@@ -14,11 +14,9 @@ import javax.validation.Payload;
 @Target({ElementType.TYPE, ElementType.ANNOTATION_TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ValidPeriod {
- // used to get later in the resource bundle the i18n text
  String message() default "Charging period cannot be higher than subscription period!";
  Class<?>[] groups() default {};
  Class<? extends Payload>[] payload() default {};
- // min value, we for now just a string
  String subscriptionPeriod();
  String chargingPeriod();
 }
