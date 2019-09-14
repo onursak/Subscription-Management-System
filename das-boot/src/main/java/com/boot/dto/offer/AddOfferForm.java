@@ -34,16 +34,16 @@ public class AddOfferForm{
 	private String name;
 	
 	@NotNull(message = "{exception.null}")
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @DateTimeFormat(pattern = "dd-MM-yyyy HH:mm", iso = DateTimeFormat.ISO.DATE_TIME)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm")
+    	@JsonDeserialize(using = LocalDateTimeDeserializer.class)
+    	@DateTimeFormat(pattern = "dd-MM-yyyy HH:mm", iso = DateTimeFormat.ISO.DATE_TIME)
+    	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm")
 	@Future(message = "{exception.date.future}")
 	private LocalDateTime startDate;
 	
 	@NotNull(message = "{exception.null}")
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @DateTimeFormat(pattern = "dd-MM-yyyy HH:mm", iso = DateTimeFormat.ISO.DATE_TIME)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm")
+    	@JsonDeserialize(using = LocalDateTimeDeserializer.class)
+    	@DateTimeFormat(pattern = "dd-MM-yyyy HH:mm", iso = DateTimeFormat.ISO.DATE_TIME)
+    	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm")
 	@Future(message = "{exception.date.future}")
 	private LocalDateTime endDate;
 	
